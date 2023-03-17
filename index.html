@@ -348,6 +348,21 @@
                 </li>
             </ul>
         </div>
+        <div class="footer-subscribe-field">
+            <h2 class="footer-subscribe-text">Subscribe</h2>
+            <form class="footer-subscribe-form">
+                <div class="footer-subscribe-wrapper">
+                    <input type="email" name="email_subscribe" class="footer-subscribe-input" placeholder="E-mail"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+                    <button type="submit" class="subsribe-btn">
+                        Subscribe
+                        <svg class="footer-subscribe-icon" width="24px" height="20px">
+                            <use href="./images/sprite.svg.svg#icon-telegram-subscr"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 </footer>
 <div class="backdrop is-hidden" data-modal>
@@ -357,22 +372,45 @@
                 <use href="./images/sprite.svg.svg#icon-close-btn"></use>
             </svg>
         </button>
-        <h2 class="modal-title">Leave your contacts and we will call you back</h2>
-        <form action="" class="modal-form">
-            <label>
-                Name
-                <input class="input-form-name" type="text" name="username">
+        <p class="modal-title">Leave your contacts and we will call you back</p>
+        <form class="modal-form ">
+            <label class="modal-form-field">
+                <span class="modal-form-input-text">Name</span> 
+                <div class="modal-form-input-wrapper">
+                    <input type="text" name="user_name" class="modal-form-input" required pattern="^[a-zA-Zа-яА-Я ]+$" minlength="2"/>
+                    <svg class="modal-form-input-icon" width="12" height="12">
+                        <use href="./images/sprite.svg.svg#icon-user-icon"></use>
+                    </svg>
+                </div>
+            </label>
+            <label class="modal-form-field">
+             <span class="modal-form-input-text">Phone</span>
+                <div class="modal-form-input-wrapper">
+                    <input type="tel" name="user-phone" class="modal-form-input" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="xxx-xxx-xx-xx"/>
+                    <svg class="modal-form-input-icon" width="12" height="12">
+                        <use href="./images/sprite.svg.svg#icon-phone-icon"></use>
+                    </svg>
+                </div>
+            </label>
+            <label class="modal-form-field">
+             <span class="modal-form-input-text">Email</span>
+                <div class="modal-form-input-wrapper">
+                    <input type="mail" name="user_mail" class="modal-form-input" required/>
+                    <svg class="modal-form-input-icon" width="12" height="12">
+                        <use href="./images/sprite.svg.svg#icon-mail-icon"></use>
+                    </svg>
+                </div>
+            </label>
+            <label class="modal-form-field">
+                <span class="modal-form-input-text">Comment</span>
+                <textarea name="user-message" class="modal-form-message" placeholder="Text input"></textarea>
             </label>
             <label>
-                Phone
-                <input type="tel" name="phone_number" />
+            <input id="user-policy" type="checkbox" class="modal-form-check visually-hiden" name="user_policy" />
+                <label for="user-policy" class="modal-form-check-text">I accept the terms and conditions of the&nbsp<a href="">Privacy Policy</a></label>
             </label>
-            <label>
-                Email
-                <input type="mail" name="user_mail" />
-            </label>
-            <div>
-                <button type="submit" class="modal-form-btn">Send</button>
+            <div class="modal-form-btn">
+                <button type="submit" class="modal-form-submit">Send</button>
             </div>
         </form>
         
